@@ -18,7 +18,7 @@ function addString(num1 = "", num2 = "") {
     // 保存计算结果
     let ans = [];
 
-    while (n1Index > 0 || n2Index > 0 || add > 0 ) {
+    while (n1Index >= 0 || n2Index >= 0 || add > 0 ) {
         // 补位
         let x = n1Index >= 0 ? num1.charAt(n1Index) - '0' : 0;
         let y = n2Index >= 0 ? num2.charAt(n2Index) - '0' : 0;
@@ -35,8 +35,14 @@ function addString(num1 = "", num2 = "") {
         n2Index -= 1
     }
 
-    // 随着push操作，最先被计算的结果放在了数组头部，需要反转一下顺序
-    return ans.reverse().join("")
+
+    if (ans.length === 0) {
+        return "0"
+    } else {
+        // 随着push操作，最先被计算的结果放在了数组头部，需要反转一下顺序
+        return ans.reverse().join("")
+    }
+
 }
 
 
