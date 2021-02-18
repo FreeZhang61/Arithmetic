@@ -1,2 +1,2 @@
-let alg = require("./addString.js")
-alg.addString("21", "79")
+let alg = require("./climbStairs.js")
+console.log(alg.climbStairs("4"))
