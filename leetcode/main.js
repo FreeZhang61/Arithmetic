@@ -1,2 +1,2 @@
-let alg = require("./easy/bubbling")
-console.log(alg.bubbling([5,2,3,2]))
+let alg = require("./easy/binarySearch")
+console.log(alg.binarySearch([1,2,3,4,5], 3))
